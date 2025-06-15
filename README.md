@@ -1,74 +1,59 @@
-# ⚠️ Importante!!!
-Você pode escolher qualquer um dos desafios para desenvolver. Sinta-se à vontade para começar pelo desafio que mais lhe interessa.
+# 🃏 Super Trunfo de Países - Desafio de Programação em C
 
-# Desafio Super Trunfo - Países - Comparação das Cartas
+Este repositório contém um programa em C que simula uma rodada do jogo Super Trunfo, utilizando dados fixos dos países Brasil e Argentina. O projeto foi desenvolvido para aplicar conceitos fundamentais da linguagem C, como o uso de funções, manipulação de variáveis, entrada e saída de dados e lógica condicional para determinar o vencedor.
 
-Bem-vindo ao desafio "Super Trunfo - Países"! Neste projeto, você desenvolverá um sistema para comparar cartas baseadas em atributos de cidades. O desafio é dividido em três níveis: Novato, Aventureiro e Mestre. Cada nível adiciona novas funcionalidades e complexidades, permitindo um aprendizado progressivo.
+## 📜 Sobre o Projeto
 
-## 🏅 Nível Novato
+O objetivo deste projeto é permitir que o usuário participe de uma rodada de Super Trunfo, onde ele escolhe dois atributos para comparar as "cartas" de Brasil e Argentina. O programa, então, realiza a comparação para os atributos selecionados, atribui pontos e declara um vencedor geral para a rodada, demonstrando de forma prática a aplicação da lógica de programação em C.
 
-No nível Novato, você começará implementando a lógica básica de comparação entre cartas utilizando estruturas de decisão `if` e `if-else`.
+## ✨ Funcionalidades
 
-### 🚩 Objetivos:
-- **Cadastro de Cartas:** O sistema permitirá ao usuário cadastrar cartas de cidades, incluindo informações como estado, código da carta, nome da cidade, população, área, PIB e número de pontos turísticos.
-- **Comparação de Cartas:** O sistema comparará os atributos de duas cartas e determinará a vencedora com base em uma propriedade específica (população, área, PIB, etc.), escolhida no código.
-- **Exibição de Resultados:** Após a comparação, o sistema exibirá qual carta venceu com base na regra: maior valor vence, exceto em densidade populacional, onde o menor valor é o vencedor.
+O programa implementa as seguintes funcionalidades:
 
-### 📥 Entrada de Dados:
-- Os dados das cartas serão inseridos manualmente via terminal.
-- O sistema solicitará interativamente as informações de cada carta.
+  * **Cartas Pré-definidas:** O jogo utiliza dados fixos para duas cartas: Brasil e Argentina.
+  * **Seleção Interativa de Atributos:** Permite que o usuário escolha dois atributos diferentes para a comparação em cada rodada, através de um menu dinâmico.
+  * **Cálculo de Atributo Derivado:** O programa calcula automaticamente a **Densidade Demográfica** (População / Área) para cada país.
+  * **Comparação e Pontuação:** Compara os dois países com base nos atributos escolhidos pelo usuário. Um ponto é concedido ao país que vence em cada atributo.
+  * **Regra Especial de Comparação:** Para a maioria dos atributos, o maior valor vence. Para a **Densidade Demográfica**, a lógica é invertida e o **menor** valor vence.
+  * **Exibição de Resultados:** Mostra de forma clara os valores de cada país para os atributos escolhidos, a pontuação final da rodada e declara o grande vencedor.
 
-### 📤 Saída de Dados:
-- Após o cadastro, as propriedades da cidade serão exibidas de forma organizada.
-- O resultado da comparação será mostrado, indicando a carta vencedora.
+## 🛠️ Como Compilar e Executar
 
----
+Para compilar e executar o projeto, você precisará de um compilador C, como o **GCC**. Siga os passos abaixo no seu terminal:
 
-## 🏅 Nível Aventureiro
+1.  **Clone o repositório:**
 
-No nível Aventureiro, você expandirá o sistema para incluir a comparação aninhada e a criação de um menu interativo usando `switch`.
+    ```bash
+    git clone https://github.com/Mari-Elo/SEU-REPOSITORIO.git
+    ```
 
-### 🆕 Diferença em relação ao Nível Novato:
-- **Menu Interativo:** O usuário poderá escolher diferentes atributos para comparação através de um menu.
-- **Comparação Aninhada:** Implementação de lógica de comparação mais complexa, utilizando estruturas aninhadas para tomar decisões baseadas em múltiplos atributos.
+2.  **Navegue até a pasta do projeto:**
 
-### 🚩 Novas Funcionalidades:
-- **Cadastro de Cartas:** Similar ao nível Novato, com a adição de comparação de múltiplos atributos.
-- **Menu Interativo:** Uso de `switch` para criar um menu que permite ao jogador escolher os atributos a serem comparados.
-- **Exibição de Resultados:** O sistema exibirá o resultado da comparação, indicando qual carta venceu e qual atributo foi utilizado.
+    ```bash
+    cd SEU-REPOSITORIO
+    ```
 
----
+3.  **Compile o código-fonte (vamos supor que se chame `super_trunfo_paises.c`):**
 
-## 🏅 Nível Mestre
+    ```bash
+    gcc super_trunfo_paises.c -o super_trunfo_paises
+    ```
 
-No nível Mestre, o desafio se intensifica com a adição de funcionalidades avançadas, como menus dinâmicos e lógica de decisão complexa com operadores ternários.
+4.  **Execute o programa:**
 
-### 🆕 Diferença em relação ao Nível Aventureiro:
-- **Escolha de Dois Atributos:** O usuário poderá escolher dois atributos para comparação entre as cartas.
-- **Lógica de Decisão Complexa:** Implementação de estruturas de decisão aninhadas e encadeadas, além do uso de operadores ternários para determinar a carta vencedora.
-- **Menus Dinâmicos:** Os menus serão dinâmicos, permitindo uma navegação fluida entre as opções de comparação.
+    ```bash
+    ./super_trunfo_paises
+    ```
 
-### 🚩 Novas Funcionalidades:
-- **Comparação de Dois Atributos:** O sistema comparará dois atributos simultaneamente para determinar a carta vencedora.
-- **Lógica Avançada:** Uso de operadores ternários e lógica aninhada para lidar com comparações complexas.
-- **Empates:** O sistema será capaz de lidar com empates, exibindo mensagens apropriadas.
-- **Exibição de Resultados:** Exibição dos resultados das comparações de forma clara e interativa.
+    O programa então iniciará, apresentando o menu para a seleção de atributos.
 
----
+## 💻 Tecnologias Utilizadas
 
-## 📋 Requisitos Funcionais Comuns
-- **Cadastro de Cartas:** O sistema deve permitir o cadastro de cartas com as informações necessárias.
-- **Comparação:** O sistema deve comparar as cartas e determinar a vencedora com base nas regras estabelecidas.
-- **Exibição de Resultados:** Os resultados devem ser exibidos de forma clara, indicando a carta vencedora.
+  * **Linguagem:** C
+  * **Compilador:** GCC
+  * **Versionamento:** Git e GitHub
 
-## 📌 Requisitos Não Funcionais Comuns
-- **Usabilidade:** A interface do usuário deve ser simples e intuitiva.
-- **Performance:** O sistema deve executar operações sem atrasos perceptíveis.
-- **Manutenibilidade:** O código deve ser bem estruturado e documentado.
-- **Confiabilidade:** O sistema deve ser robusto e capaz de lidar com entradas inválidas de forma adequada.
+## 👤 Autor
 
----
-
-Boa sorte no desenvolvimento deste desafio e aproveite para aprender e se divertir enquanto progride pelos níveis!
-
-Equipe de Ensino - MateCheck
+  * **Nome:** Maria Eloisa Ferreira de Souza
+  * **GitHub:** [https://github.com/Mari-Elo](https://github.com/Mari-Elo)
